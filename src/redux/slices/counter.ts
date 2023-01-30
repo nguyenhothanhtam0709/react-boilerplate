@@ -24,10 +24,16 @@ export const counterSlice = createSlice({
         value: state.value - payload.payload,
       };
     },
+    reset: (state: CounterState, payload: PayloadAction) => {
+      return initialState;
+    },
   },
 });
 
-export const { increment: incrementAction, decrement: decrementAction } =
-  counterSlice.actions;
+export const {
+  increment: incrementAction,
+  decrement: decrementAction,
+  reset: resetAction,
+} = counterSlice.actions;
 
 export default counterSlice.reducer;

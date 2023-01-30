@@ -1,1 +1,5 @@
-export { incrementAction, decrementAction } from "./slices/counter";
+export {
+  incrementAction,
+  decrementAction,
+  resetAction,
+} from "./slices/counter";
