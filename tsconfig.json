@@ -23,7 +23,8 @@
       "@pages/*": ["./src/pages/*"],
       "@redux/*": ["./src/redux/*"],
       "@services/*": ["./src/services/*"]
-    }
+    },
+    "typeRoots": ["./src/@types"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

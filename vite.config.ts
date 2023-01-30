@@ -31,4 +31,5 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  envDir: "./env",
 });
