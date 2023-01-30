@@ -3,7 +3,16 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 const resolvedAlias = Object.fromEntries(
-  [["@scss", "./src/scss"]].map((value) => [
+  [
+    ["@assets", "./src/assets"],
+    ["@commons", "./src/commons"],
+    ["@components", "./src/components"],
+    ["@core", "./src/core"],
+    ["@pages", "./src/pages"],
+    ["@redux", "./src/redux"],
+    ["@scss", "./src/scss"],
+    ["@services", "./src/services"],
+  ].map((value) => [
     value[0],
     fileURLToPath(new URL(value[1], import.meta.url)),
   ])
