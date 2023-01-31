@@ -1,14 +1,12 @@
 import React, { type FC } from "react";
-import styles from "./styles.module.scss";
-import { Link } from "react-router-dom";
-import { COUNTER_ROUTE } from "@commons/constants/browser-route";
+import SimpleContainer from "@components/template/container/SimpleContainer";
+import Home from "@components/ui/Home";
 
 const HomePage: FC = () => {
   return (
-    <div className={styles.heading}>
-      <h1>React boilerplate</h1>
-      <Link to={COUNTER_ROUTE}>Go to counter page</Link>
-    </div>
+    <SimpleContainer title="Home">
+      <Home />
+    </SimpleContainer>
   );
 };
 export default HomePage;
