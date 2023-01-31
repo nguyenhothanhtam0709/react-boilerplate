@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "tsm": "typed-scss-modules src/**/*.module.scss",
     "tsm:watch": "yarn tsm --watch",
-    "serve": "serve dist -p 3000"
+    "serve": "serve -s dist -p 3000"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.8",
