@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import type { FC } from "react";
+import { Link } from "react-router-dom";
 import { classNames } from "@commons/utils/classname";
 import { Menu, Transition } from "@headlessui/react";
 
@@ -22,15 +23,15 @@ const Dropdown: FC<Props> = ({ userNavigation }) => {
         {userNavigation.map((item) => (
           <Menu.Item key={item.name}>
             {({ active }: { active: boolean }) => (
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className={classNames(
                   active ? "bg-gray-100" : "",
                   "block px-4 py-2 text-sm text-gray-700"
                 )}
               >
                 {item.name}
-              </a>
+              </Link>
             )}
           </Menu.Item>
         ))}

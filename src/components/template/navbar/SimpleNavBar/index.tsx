@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import type { FC } from "react";
 import { useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
 import SimpleNavLogo from "@components/shared/navbar/logo/SimpleNavLogo";
 import MobileProfileMenu from "@components/shared/navbar/menu/MobileProfileMenu";
 import SimpleNav from "@components/shared/navbar/menu/SimpleNav";
@@ -27,17 +26,6 @@ const userNavigation: Array<DropDownNavigationItem> = [
 
 const SimpleNavBar: FC = () => {
   const user = useSelector<RootState, UserData>((state) => state.auth.user!);
-  const location = useLocation();
-
-  console.log({ location });
-
-  useEffect(() => {
-    navigation.forEach((item) => {
-      if (item.href === location.pathname) {
-        item.current = true;
-      }
-    });
-  }, [location]);
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
